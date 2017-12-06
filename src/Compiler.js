@@ -139,7 +139,7 @@ Compiler.prototype.getFileContent = function(filePath) {
       return '';
     })
     .replace(/<\!\-\-(.|\n)*\!\-\->/g, '')
-    .replace(/^\s+|\s+$|[\r\n]+/gm, '')
+    .replace(/^\s+|\s+$|[\r\n]+/gm, ' ')
     .replace(/\/\*.*?\*\//gm,'');
 
   content = this.loadPendingPartials(content, pendingPartialLoads);
